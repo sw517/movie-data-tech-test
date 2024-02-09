@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
 import './globals.css';
+import { GitHubLink } from './_components/GitHubLink/GitHubLink';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <header className="flex justify-between p-2 bg-gray-900">
+            <h1>Movie Database</h1>
+            <GitHubLink />
+          </header>
+          {children}
+        </body>
       </Providers>
     </html>
   );

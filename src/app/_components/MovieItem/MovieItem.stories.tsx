@@ -20,9 +20,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Base: Story = {
-  args: mockData.results[0],
+  args: mockData[1],
 };
 
 export const MissingImage: Story = {
-  args: { ...mockData.results[0], primaryImage: null },
+  args: { ...mockData[1], primaryImage: null },
 };

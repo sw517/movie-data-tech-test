@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Movie } from '@/types/movie';
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useState } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 import styles from './styles.module.css';
@@ -11,6 +11,7 @@ export const MovieItem: FC<Movie> = ({
   primaryImage,
   releaseYear,
 }): ReactNode => {
+  const [hasImage, setHasImage] = useState(!!primaryImage);
   return (
     <Link
       href={`/movie/${id}`}
@@ -23,22 +24,25 @@ export const MovieItem: FC<Movie> = ({
         className={clsx([
           'absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-20 backdrop-blur-sm text-white',
           styles.text,
-          !primaryImage && styles['force-show-text'],
+          !hasImage && styles['force-show-text'],
         ])}
       >
-        <h2 className="font-bold line-clamp-3">{titleText.text}</h2>
+        <h2 title={titleText.text} className="font-bold line-clamp-3">
+          {titleText.text}
+        </h2>
         <p>({releaseYear.year})</p>
       </div>
-      {primaryImage && (
+      {hasImage && primaryImage && (
         <Image
           src={primaryImage.url}
           width={primaryImage.width}
           height={primaryImage.height}
           alt={primaryImage.caption.plainText}
           className="object-cover bg-center rounded-md aspect-[2/3] w-full"
+          onError={() => setHasImage(false)}
         />
       )}
-      {!primaryImage && (
+      {!hasImage && (
         <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 text-white font-bold text-center">
           Image unavailable
         </div>

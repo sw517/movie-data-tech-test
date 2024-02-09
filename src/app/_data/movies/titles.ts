@@ -1,377 +1,426 @@
-export const titles = {
-  page: 1,
-  next: '/titles?page=2',
-  entries: 10,
-  results: [
-    {
-      _id: '61e57fd65c5338f43c777f4a',
-      id: 'tt0000081',
-      primaryImage: {
-        id: 'rm211543552',
-        width: 226,
-        height: 300,
-        url: 'https://m.media-amazon.com/images/M/MV5BM2ZlYjA4NmItZTYxYy00MGFiLTg3MWUtNzZmYjE1ODZmMThjXkEyXkFqcGdeQXVyNTI2NTY2MDI@._V1_.jpg',
-        caption: {
-          plainText: 'Les haleurs de bateaux (1896)',
-          __typename: 'Markdown',
-        },
-        __typename: 'Image',
+export const titles = [
+  {
+    _id: '61e581048a5a6a599f4150cf',
+    id: 'tt0076759',
+    primaryImage: {
+      id: 'rm3263717120',
+      width: 1820,
+      height: 2827,
+      url: 'https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg',
+      caption: {
+        plainText:
+          'Alec Guinness, Harrison Ford, Anthony Daniels, Carrie Fisher, Mark Hamill, James Earl Jones, Peter Cushing, David Prowse, Kenny Baker, and Peter Mayhew in Star Wars (1977)',
+        __typename: 'Markdown',
       },
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
-      },
-      titleText: {
-        text: 'Les haleurs de bateaux',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'Les haleurs de bateaux',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1896,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: null,
+      __typename: 'Image',
     },
-    {
-      _id: '61e57fd65c5338f43c777f4c',
-      id: 'tt0000045',
-      primaryImage: {
-        id: 'rm362538496',
-        width: 226,
-        height: 300,
-        url: 'https://m.media-amazon.com/images/M/MV5BNzBjZjI4YjYtNGIyOC00ZDQyLTg0OTctN2U2YmUyMjJiZTQzXkEyXkFqcGdeQXVyNTI2NTY2MDI@._V1_.jpg',
-        caption: {
-          plainText: 'Les blanchisseuses (1896)',
-          __typename: 'Markdown',
-        },
-        __typename: 'Image',
-      },
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
-      },
-      titleText: {
-        text: 'Les blanchisseuses',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'Les blanchisseuses',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1896,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: {
-        day: null,
-        month: null,
-        year: 1896,
-        __typename: 'ReleaseDate',
-      },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
     },
-    {
-      _id: '61e57fd65c5338f43c777f4e',
-      id: 'tt0000066',
-      primaryImage: {
-        id: 'rm1117513216',
-        width: 226,
-        height: 300,
-        url: 'https://m.media-amazon.com/images/M/MV5BZGUxMmJiZjEtMDdkNC00MGMzLWI3MTItOTJiYmNhOGM0Mjk5XkEyXkFqcGdeQXVyNTI2NTY2MDI@._V1_.jpg',
-        caption: {
-          plainText: 'Dessinateur: Von Bismark (1896)',
-          __typename: 'Markdown',
-        },
-        __typename: 'Image',
-      },
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
-      },
-      titleText: {
-        text: 'Dessinateur: Von Bismark',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'Dessinateur: Von Bismark',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1896,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: null,
+    titleText: {
+      text: 'Star Wars: Episode IV - A New Hope',
+      __typename: 'TitleText',
     },
-    {
-      _id: '61e57fd65c5338f43c777f50',
-      id: 'tt0000049',
-      primaryImage: {
-        id: 'rm4062580736',
-        width: 1280,
-        height: 720,
-        url: 'https://m.media-amazon.com/images/M/MV5BNjQ0YzQwYjctMTljYi00MzhmLTliMGUtMTY2NzE3MjgzYzYzXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg',
-        caption: {
-          plainText: 'Boxing Match; or, Glove Contest (1896)',
-          __typename: 'Markdown',
-        },
-        __typename: 'Image',
-      },
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
-      },
-      titleText: {
-        text: 'Boxing Match; or, Glove Contest',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'Boxing Match; or, Glove Contest',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1896,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: {
-        day: null,
-        month: 1,
-        year: 1896,
-        __typename: 'ReleaseDate',
-      },
+    originalTitleText: {
+      text: 'Star Wars',
+      __typename: 'TitleText',
     },
-    {
-      _id: '61e57fd65c5338f43c777f52',
-      id: 'tt0000103',
-      primaryImage: {
-        id: 'rm597419520',
-        width: 226,
-        height: 300,
-        url: 'https://m.media-amazon.com/images/M/MV5BNDgxYjBjY2QtYjg5Mi00MGI2LWFlZWUtNWI5MDAzOTMyOGM4XkEyXkFqcGdeQXVyNTI2NTY2MDI@._V1_.jpg',
-        caption: {
-          plainText: 'Plus fort que le maître (1896)',
-          __typename: 'Markdown',
-        },
-        __typename: 'Image',
-      },
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
-      },
-      titleText: {
-        text: 'Plus fort que le maître',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'Plus fort que le maître',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1896,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: null,
+    releaseYear: {
+      year: 1977,
+      endYear: null,
+      __typename: 'YearRange',
     },
-    {
-      _id: '61e57fd65c5338f43c777f54',
-      id: 'tt0000133',
-      primaryImage: {
-        id: 'rm1738270208',
-        width: 226,
-        height: 300,
-        url: 'https://m.media-amazon.com/images/M/MV5BMmQyNGUxNzYtZGNjNi00YjAzLTlkZGUtNzkyMjUxMzdmOTFkXkEyXkFqcGdeQXVyNTI2NTY2MDI@._V1_.jpg',
-        caption: {
-          plainText: 'La voiture du potier (1896)',
-          __typename: 'Markdown',
-        },
-        __typename: 'Image',
-      },
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
-      },
-      titleText: {
-        text: 'La voiture du potier',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'La voiture du potier',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1896,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: null,
+    releaseDate: {
+      day: 15,
+      month: 12,
+      year: 1977,
+      __typename: 'ReleaseDate',
     },
-    {
-      _id: '61e57fd65c5338f43c777f56',
-      id: 'tt0000125',
-      primaryImage: null,
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
+    position: 110,
+  },
+  {
+    _id: '61e58119971a4a15d641549b',
+    id: 'tt0083866',
+    primaryImage: {
+      id: 'rm1993282560',
+      width: 930,
+      height: 1451,
+      url: 'https://m.media-amazon.com/images/M/MV5BMTQ2ODFlMDAtNzdhOC00ZDYzLWE3YTMtNDU4ZGFmZmJmYTczXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg',
+      caption: {
+        plainText:
+          'Henry Thomas and Pat Welsh in E.T. the Extra-Terrestrial (1982)',
+        __typename: 'Markdown',
       },
-      titleText: {
-        text: 'The Terrible Railway Accident',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'The Terrible Railway Accident',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1896,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: null,
+      __typename: 'Image',
     },
-    {
-      _id: '61e57fd65c5338f43c777f58',
-      id: 'tt0000184',
-      primaryImage: {
-        id: 'rm2943491328',
-        width: 700,
-        height: 525,
-        url: 'https://m.media-amazon.com/images/M/MV5BNjg1MGM4Y2MtYThkNy00NDc0LWIxMzItYzk0MDc1ZTRhNTkxXkEyXkFqcGdeQXVyNzg5OTk2OA@@._V1_.jpg',
-        caption: {
-          plainText: 'Cripple Creek Bar-Room Scene (1899)',
-          __typename: 'Markdown',
-        },
-        __typename: 'Image',
-      },
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
-      },
-      titleText: {
-        text: 'Cripple Creek Bar-Room Scene',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'Cripple Creek Bar-Room Scene',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1899,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: {
-        day: null,
-        month: 5,
-        year: 1899,
-        __typename: 'ReleaseDate',
-      },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
     },
-    {
-      _id: '61e57fd65c5338f43c777f5a',
-      id: 'tt0000109',
-      primaryImage: {
-        id: 'rm2010186752',
-        width: 614,
-        height: 819,
-        url: 'https://m.media-amazon.com/images/M/MV5BNjJhZjUzODMtZjg4ZS00OTQ3LWFhYjctYzYxZDM5OGNmZWFlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNzg5OTk2OA@@._V1_.jpg',
-        caption: {
-          plainText: 'Rip Meeting the Dwarf (1896)',
-          __typename: 'Markdown',
-        },
-        __typename: 'Image',
-      },
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
-      },
-      titleText: {
-        text: 'Rip Meeting the Dwarf',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'Rip Meeting the Dwarf',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1896,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: {
-        day: null,
-        month: 9,
-        year: 1896,
-        __typename: 'ReleaseDate',
-      },
+    titleText: {
+      text: 'E.T. the Extra-Terrestrial',
+      __typename: 'TitleText',
     },
-    {
-      _id: '61e57fd65c5338f43c777f5c',
-      id: 'tt0000086',
-      primaryImage: {
-        id: 'rm1872487936',
-        width: 226,
-        height: 300,
-        url: 'https://m.media-amazon.com/images/M/MV5BNzdmZjgzMmQtNWNmYS00NTIzLTkxYjctNmUxYmJlMDAzZDk4XkEyXkFqcGdeQXVyNTI2NTY2MDI@._V1_.jpg',
-        caption: {
-          plainText: 'Jetée et plage de Trouville (1er partie) (1896)',
-          __typename: 'Markdown',
-        },
-        __typename: 'Image',
-      },
-      titleType: {
-        text: 'Short',
-        id: 'short',
-        isSeries: false,
-        isEpisode: false,
-        __typename: 'TitleType',
-      },
-      titleText: {
-        text: 'Jetée et plage de Trouville (1er partie)',
-        __typename: 'TitleText',
-      },
-      originalTitleText: {
-        text: 'Jetée et plage de Trouville (1er partie)',
-        __typename: 'TitleText',
-      },
-      releaseYear: {
-        year: 1896,
-        endYear: null,
-        __typename: 'YearRange',
-      },
-      releaseDate: null,
+    originalTitleText: {
+      text: 'E.T. the Extra-Terrestrial',
+      __typename: 'TitleText',
     },
-  ],
-};
+    releaseYear: {
+      year: 1982,
+      endYear: null,
+      __typename: 'YearRange',
+    },
+    releaseDate: {
+      day: 2,
+      month: 12,
+      year: 1982,
+      __typename: 'ReleaseDate',
+    },
+    position: 102,
+  },
+  {
+    _id: '61e58170d735dff3f94163f3',
+    id: 'tt0107290',
+    primaryImage: {
+      id: 'rm3913805824',
+      width: 667,
+      height: 1000,
+      url: 'https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg',
+      caption: {
+        plainText: 'Jurassic Park (1993)',
+        __typename: 'Markdown',
+      },
+      __typename: 'Image',
+    },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
+    },
+    titleText: {
+      text: 'Jurassic Park',
+      __typename: 'TitleText',
+    },
+    originalTitleText: {
+      text: 'Jurassic Park',
+      __typename: 'TitleText',
+    },
+    releaseYear: {
+      year: 1993,
+      endYear: null,
+      __typename: 'YearRange',
+    },
+    releaseDate: {
+      day: 30,
+      month: 9,
+      year: 1993,
+      __typename: 'ReleaseDate',
+    },
+    position: 33,
+  },
+  {
+    _id: '61e581788a5a6a599f41659d',
+    id: 'tt0109830',
+    primaryImage: {
+      id: 'rm1954748672',
+      width: 558,
+      height: 809,
+      url: 'https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg',
+      caption: {
+        plainText: 'Tom Hanks in Forrest Gump (1994)',
+        __typename: 'Markdown',
+      },
+      __typename: 'Image',
+    },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
+    },
+    titleText: {
+      text: 'Forrest Gump',
+      __typename: 'TitleText',
+    },
+    originalTitleText: {
+      text: 'Forrest Gump',
+      __typename: 'TitleText',
+    },
+    releaseYear: {
+      year: 1994,
+      endYear: null,
+      __typename: 'YearRange',
+    },
+    releaseDate: {
+      day: 22,
+      month: 9,
+      year: 1994,
+      __typename: 'ReleaseDate',
+    },
+    position: 148,
+  },
+  {
+    _id: '61e58179909c2ca7814165d7',
+    id: 'tt0110357',
+    primaryImage: {
+      id: 'rm3272938240',
+      width: 1995,
+      height: 2964,
+      url: 'https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg',
+      caption: {
+        plainText: 'Matthew Broderick in The Lion King (1994)',
+        __typename: 'Markdown',
+      },
+      __typename: 'Image',
+    },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
+    },
+    titleText: {
+      text: 'The Lion King',
+      __typename: 'TitleText',
+    },
+    originalTitleText: {
+      text: 'The Lion King',
+      __typename: 'TitleText',
+    },
+    releaseYear: {
+      year: 1994,
+      endYear: null,
+      __typename: 'YearRange',
+    },
+    releaseDate: {
+      day: 24,
+      month: 11,
+      year: 1994,
+      __typename: 'ReleaseDate',
+    },
+    position: 56,
+  },
+  {
+    _id: '61e5818ca66e59642341698f',
+    id: 'tt0116629',
+    primaryImage: {
+      id: 'rm2203522816',
+      width: 768,
+      height: 1152,
+      url: 'https://m.media-amazon.com/images/M/MV5BMGQwNDNkMmItYWY1Yy00YTZmLWE5OTAtODU0MGZmMzQ1NDdkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg',
+      caption: {
+        plainText: 'Independence Day (1996)',
+        __typename: 'Markdown',
+      },
+      __typename: 'Image',
+    },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
+    },
+    titleText: {
+      text: 'Independence Day',
+      __typename: 'TitleText',
+    },
+    originalTitleText: {
+      text: 'Independence Day',
+      __typename: 'TitleText',
+    },
+    releaseYear: {
+      year: 1996,
+      endYear: null,
+      __typename: 'YearRange',
+    },
+    releaseDate: {
+      day: 3,
+      month: 10,
+      year: 1996,
+      __typename: 'ReleaseDate',
+    },
+    position: 95,
+  },
+  {
+    _id: '61e58199909c2ca781416bf5',
+    id: 'tt0119567',
+    primaryImage: {
+      id: 'rm2659587072',
+      width: 800,
+      height: 1178,
+      url: 'https://m.media-amazon.com/images/M/MV5BMDFlMmM4Y2QtNDg1ZS00MWVlLTlmODgtZDdhYjY5YjdhN2M0XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_.jpg',
+      caption: {
+        plainText: 'The Lost World: Jurassic Park (1997)',
+        __typename: 'Markdown',
+      },
+      __typename: 'Image',
+    },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
+    },
+    titleText: {
+      text: 'The Lost World: Jurassic Park',
+      __typename: 'TitleText',
+    },
+    originalTitleText: {
+      text: 'The Lost World: Jurassic Park',
+      __typename: 'TitleText',
+    },
+    releaseYear: {
+      year: 1997,
+      endYear: null,
+      __typename: 'YearRange',
+    },
+    releaseDate: {
+      day: 25,
+      month: 9,
+      year: 1997,
+      __typename: 'ReleaseDate',
+    },
+    position: 174,
+  },
+  {
+    _id: '61e58199a66e596423416c03',
+    id: 'tt0119654',
+    primaryImage: {
+      id: 'rm2364027904',
+      width: 1000,
+      height: 1500,
+      url: 'https://m.media-amazon.com/images/M/MV5BOTlhYTVkMDktYzIyNC00NzlkLTlmN2ItOGEyMWQ4OTA2NDdmXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg',
+      caption: {
+        plainText: 'Tommy Lee Jones and Will Smith in Men in Black (1997)',
+        __typename: 'Markdown',
+      },
+      __typename: 'Image',
+    },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
+    },
+    titleText: {
+      text: 'Men in Black',
+      __typename: 'TitleText',
+    },
+    originalTitleText: {
+      text: 'Men in Black',
+      __typename: 'TitleText',
+    },
+    releaseYear: {
+      year: 1997,
+      endYear: null,
+      __typename: 'YearRange',
+    },
+    releaseDate: {
+      day: 24,
+      month: 7,
+      year: 1997,
+      __typename: 'ReleaseDate',
+    },
+    position: 184,
+  },
+  {
+    _id: '61e5819a95801a78bc416c85',
+    id: 'tt0121766',
+    primaryImage: {
+      id: 'rm4094016256',
+      width: 1152,
+      height: 1536,
+      url: 'https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_.jpg',
+      caption: {
+        plainText:
+          'Samuel L. Jackson, Ewan McGregor, Natalie Portman, Frank Oz, Ian McDiarmid, and Hayden Christensen in Star Wars: Episode III - Revenge of the Sith (2005)',
+        __typename: 'Markdown',
+      },
+      __typename: 'Image',
+    },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
+    },
+    titleText: {
+      text: 'Star Wars: Episode III - Revenge of the Sith',
+      __typename: 'TitleText',
+    },
+    originalTitleText: {
+      text: 'Star Wars: Episode III - Revenge of the Sith',
+      __typename: 'TitleText',
+    },
+    releaseYear: {
+      year: 2005,
+      endYear: null,
+      __typename: 'YearRange',
+    },
+    releaseDate: {
+      day: 18,
+      month: 5,
+      year: 2005,
+      __typename: 'ReleaseDate',
+    },
+    position: 82,
+  },
+  {
+    _id: '61e5819aef99b1c543416c1d',
+    id: 'tt0121765',
+    primaryImage: {
+      id: 'rm423895808',
+      width: 2040,
+      height: 3091,
+      url: 'https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_.jpg',
+      caption: {
+        plainText:
+          'Samuel L. Jackson, Ewan McGregor, Natalie Portman, Anthony Daniels, Frank Oz, Kenny Baker, Hayden Christensen, and Temuera Morrison in Star Wars: Episode II - Attack of the Clones (2002)',
+        __typename: 'Markdown',
+      },
+      __typename: 'Image',
+    },
+    titleType: {
+      text: 'Movie',
+      id: 'movie',
+      isSeries: false,
+      isEpisode: false,
+      __typename: 'TitleType',
+    },
+    titleText: {
+      text: 'Star Wars: Episode II - Attack of the Clones',
+      __typename: 'TitleText',
+    },
+    originalTitleText: {
+      text: 'Star Wars: Episode II - Attack of the Clones',
+      __typename: 'TitleText',
+    },
+    releaseYear: {
+      year: 2002,
+      endYear: null,
+      __typename: 'YearRange',
+    },
+    releaseDate: {
+      day: 17,
+      month: 5,
+      year: 2002,
+      __typename: 'ReleaseDate',
+    },
+    position: 159,
+  },
+];
