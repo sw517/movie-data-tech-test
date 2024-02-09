@@ -1,0 +1,10 @@
+
+@media screen and (pointer: fine) {
+  .text:not(.force-show-text) {
+    transform: translateY(100%);
+    transition: transform 150ms ease;
+  }
+  .movie-item:hover .text {
+    transform: translateY(0);
+  }
+}
