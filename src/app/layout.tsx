@@ -22,11 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body className={inter.className}>
-          <header className="flex justify-between px-6 py-2 sm:py-3 bg-gray-900">
-            <h1 className={clsx([ubuntu.className, 'text-lg'])}>
-              Movie Database
-            </h1>
-            <GitHubLink />
+          <header className="bg-gray-900">
+            <div className="max-w-screen-xl flex justify-between px-6 py-2 sm:py-3 ml-auto mr-auto">
+              <h1 className={clsx([ubuntu.className, 'text-lg'])}>
+                Movie Database
+              </h1>
+              <GitHubLink />
+            </div>
           </header>
           {children}
         </body>

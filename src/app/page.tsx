@@ -33,7 +33,7 @@ export default function Home() {
   console.log(searchResults);
 
   return (
-    <main className="p-3">
+    <main className="max-w-screen-xl p-3 ml-auto mr-auto">
       <div className="p-3 max-w-96">
         <SearchInput value={searchQuery} onChange={setSearchQuery} />
       </div>
