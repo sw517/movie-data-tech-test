@@ -12,7 +12,7 @@ export type Movie = {
   titleText: {
     text: string;
   };
-  releaseYear: {
+  releaseYear?: {
     year: number;
   };
   releaseDate: {

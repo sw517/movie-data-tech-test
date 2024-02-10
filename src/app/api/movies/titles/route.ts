@@ -1,5 +1,3 @@
-// import { NextApiRequest } from 'next';
-
 export async function GET() {
   const params = new URLSearchParams({
     list: 'top_boxoffice_200',

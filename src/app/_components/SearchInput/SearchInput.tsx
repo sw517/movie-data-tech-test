@@ -1,4 +1,5 @@
 import { ChangeEvent, FC, ReactNode } from 'react';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 
 export const SearchInput: FC<{
   value: string;
@@ -8,14 +9,26 @@ export const SearchInput: FC<{
     onChange(e.target.value);
   };
   return (
-    <>
+    <label className="relative">
+      {/* Hidden label to satisfy a11y */}
+      <span className="invisible absolute h-px w-px overflow-hidden">
+        Search films
+      </span>
       <input
         value={value}
         onChange={handleChange}
         placeholder="Search by film name"
-        className="rounded-2xl py-1 px-3 text-black"
+        className="w-full rounded-2xl py-1 pl-3 pr-5 text-black"
       />
-      <button onClick={() => onChange('')}></button>
-    </>
+      {value && (
+        <button
+          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full text-white bg-gray-500 hover:bg-gray-400 p-1"
+          aria-label="Clear input"
+          onClick={() => onChange('')}
+        >
+          <XMarkIcon className="w-3" />
+        </button>
+      )}
+    </label>
   );
 };

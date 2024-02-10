@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { GitHubLink } from './GitHubLink';
+import { LoadingCircle } from './LoadingCircle';
 
 const meta = {
-  title: 'Components/GitHubLink',
-  component: GitHubLink,
+  title: 'Components/LoadingCircle',
+  component: LoadingCircle,
   tags: ['autodocs'],
-} satisfies Meta<typeof GitHubLink>;
+} satisfies Meta<typeof LoadingCircle>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

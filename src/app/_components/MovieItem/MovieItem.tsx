@@ -30,7 +30,7 @@ export const MovieItem: FC<Movie> = ({
         <h2 title={titleText.text} className="font-bold line-clamp-3">
           {titleText.text}
         </h2>
-        <p>({releaseYear.year})</p>
+        <p>({releaseYear?.year || 'Release date unknown'})</p>
       </div>
       {hasImage && primaryImage && (
         <Image

@@ -4,7 +4,7 @@ import { titles as mockData } from '@/app/_data/movies/titles';
 import { MovieItem } from './MovieItem';
 
 const meta = {
-  title: 'MovieItem',
+  title: 'Components/MovieItem',
   component: MovieItem,
   tags: ['autodocs'],
   decorators: [

@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Ubuntu } from 'next/font/google';
 import { Providers } from './providers';
 import './globals.css';
 import { GitHubLink } from './_components/GitHubLink/GitHubLink';
+import clsx from 'clsx';
 
 const inter = Inter({ subsets: ['latin'] });
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: '500' });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,8 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body className={inter.className}>
-          <header className="flex justify-between p-2 bg-gray-900">
-            <h1>Movie Database</h1>
+          <header className="flex justify-between px-6 py-2 sm:py-3 bg-gray-900">
+            <h1 className={clsx([ubuntu.className, 'text-lg'])}>
+              Movie Database
+            </h1>
             <GitHubLink />
           </header>
           {children}
