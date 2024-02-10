@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { titles as mockData } from '@/app/_data/movies/titles';
 
-import { MovieList } from './MovieList';
+import { MovieGrid } from './MovieGrid';
 
 const meta = {
-  title: 'Components/MovieList',
-  component: MovieList,
+  title: 'Components/MovieGrid',
+  component: MovieGrid,
   tags: ['autodocs'],
-} satisfies Meta<typeof MovieList>;
+} satisfies Meta<typeof MovieGrid>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

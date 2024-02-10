@@ -1,54 +1,43 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
-import { titles as mockData } from '@/app/_data/movies/titles';
-import { MovieList } from './_components/MovieList/MovieList';
+import { useEffect, useState } from 'react';
+import { Movies } from './_components/Movies/Movies';
+import { useDebounce } from './_hooks/useDebounce';
 import { SearchInput } from './_components/SearchInput/SearchInput';
-import { useState } from 'react';
-import { LoadingCircle } from './_components/LoadingCircle/LoadingCircle';
+import { APIRoute } from '@/types/api';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [apiPath, setApiPath] = useState('');
+  const [queryString, setQueryString] = useState('');
+  const debouncedQuery = useDebounce(searchQuery, 600);
 
-  const {
-    isLoading: isLoadingStaticResults,
-    error,
-    data: staticResults,
-  } = useQuery({
-    queryKey: ['movieTitles'],
-    queryFn: () => mockData, //fetch('/api/movies/titles').then((res) => res.json()),
-    // select: (data) => data.results,
-  });
+  useEffect(() => {
+    if (debouncedQuery) {
+      setApiPath(APIRoute.SEARCH);
+      setQueryString(`search=${debouncedQuery}`);
+    } else {
+      setApiPath(APIRoute.LIST);
+      setQueryString('');
+    }
+  }, [debouncedQuery]);
 
-  const { isLoading: isLoadingSearchResults, data: searchResults } = useQuery({
-    queryKey: ['movieSearch', searchQuery],
-    queryFn: () => mockData,
-    // fetch(`/api/movies/search?search=${searchQuery}`).then((res) =>
-    //   res.json()
-    // ),
-    // select: (data) => data.results,
-    enabled: !!searchQuery,
-  });
-
-  console.log(searchResults);
+  // const { isLoading: isLoadingSearchResults, data: searchResults } = useQuery({
+  //   queryKey: ['movieSearch', searchQuery],
+  //   queryFn: () => mockData,
+  //   // fetch(`/api/movies/search?search=${searchQuery}`).then((res) =>
+  //   //   res.json()
+  //   // ),
+  //   // select: (data) => data.results,
+  //   enabled: !!searchQuery,
+  // });
 
   return (
     <main className="max-w-screen-xl p-3 ml-auto mr-auto">
       <div className="p-3 max-w-96">
         <SearchInput value={searchQuery} onChange={setSearchQuery} />
       </div>
-      {(isLoadingStaticResults || isLoadingSearchResults) && (
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <LoadingCircle />
-        </div>
-      )}
-      {error && (error.message || 'Something went wrong :(')}
-      {!searchQuery && !!staticResults?.length && (
-        <MovieList movies={staticResults} />
-      )}
-      {searchQuery && !!searchResults?.length && (
-        <MovieList movies={searchResults} />
-      )}
+      <Movies apiPath={apiPath} queryString={queryString} />
     </main>
   );
 }

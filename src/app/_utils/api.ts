@@ -1,4 +1,5 @@
 import merge from 'lodash.merge';
+import { NextRequest } from 'next/server';
 
 export const fetchRapidApi = async (path: string, config?: RequestInit) => {
   const baseUrl = 'https://moviesdatabase.p.rapidapi.com';
@@ -17,4 +18,11 @@ export const fetchRapidApi = async (path: string, config?: RequestInit) => {
   const data = await res.json();
 
   return Response.json(data);
+};
+
+export const getSearchParams = (req: NextRequest) => {
+  const limit = req.nextUrl.searchParams.get('limit') || '12';
+  const page = req.nextUrl.searchParams.get('page') || '1';
+
+  return { limit, page };
 };
