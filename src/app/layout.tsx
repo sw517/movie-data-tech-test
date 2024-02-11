@@ -4,6 +4,7 @@ import { Providers } from './providers';
 import './globals.css';
 import { GitHubLink } from './_components/GitHubLink/GitHubLink';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: '500' });
@@ -21,12 +22,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-        <body className={inter.className}>
-          <header className="bg-gray-900">
+        <body className={clsx([inter.className, 'min-h-lvh'])}>
+          <header className="">
             <div className="max-w-screen-xl flex justify-between px-6 py-2 sm:py-3 ml-auto mr-auto">
-              <h1 className={clsx([ubuntu.className, 'text-lg'])}>
+              <Link
+                href="/"
+                className={clsx([
+                  ubuntu.className,
+                  'text-lg hover:text-orange-500',
+                ])}
+              >
                 Movie Database
-              </h1>
+              </Link>
               <GitHubLink />
             </div>
           </header>

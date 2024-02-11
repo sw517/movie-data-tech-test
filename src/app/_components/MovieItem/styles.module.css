@@ -1,4 +1,5 @@
 
+/* Force text to be shown on devices without hover ability. */
 @media screen and (pointer: fine) {
   .text:not(.force-show-text) {
     transform: translateY(100%);

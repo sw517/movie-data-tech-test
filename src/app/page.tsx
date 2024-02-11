@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { Movies } from './_components/Movies/Movies';
+import { titles } from '@/data/movies/titles';
 import { useDebounce } from './_hooks/useDebounce';
 import { SearchInput } from './_components/SearchInput/SearchInput';
 import { APIRoute } from '@/types/api';
+import { MovieGrid } from './_components/MovieGrid/MovieGrid';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -37,7 +39,8 @@ export default function Home() {
       <div className="p-3 max-w-96">
         <SearchInput value={searchQuery} onChange={setSearchQuery} />
       </div>
-      <Movies apiPath={apiPath} queryString={queryString} />
+      {/* <Movies apiPath={apiPath} queryString={queryString} /> */}
+      <MovieGrid movies={titles} />
     </main>
   );
 }

@@ -20,9 +20,12 @@ export const fetchRapidApi = async (path: string, config?: RequestInit) => {
   return Response.json(data);
 };
 
-export const getSearchParams = (req: NextRequest) => {
-  const limit = req.nextUrl.searchParams.get('limit') || '12';
-  const page = req.nextUrl.searchParams.get('page') || '1';
-
-  return { limit, page };
+export const getSearchParams = (
+  req: NextRequest,
+  keys: string[]
+): { [key: string]: string | undefined } => {
+  return keys.reduce(
+    (acc, key) => ({ ...acc, [key]: req.nextUrl.searchParams.get(key) }),
+    {}
+  );
 };

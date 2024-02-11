@@ -2,7 +2,7 @@ import { fetchRapidApi, getSearchParams } from '@/app/_utils/api';
 import { NextRequest } from 'next/server';
 
 export async function GET(req: NextRequest) {
-  const { limit, page } = getSearchParams(req);
+  const { limit = '12', page = '1' } = getSearchParams(req, ['limit', 'page']);
 
   const params = new URLSearchParams({
     limit,

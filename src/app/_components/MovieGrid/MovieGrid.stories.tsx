@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { titles as mockData } from '@/app/_data/movies/titles';
+import { titles as mockData } from '@/data/movies/titles';
 
 import { MovieGrid } from './MovieGrid';
 

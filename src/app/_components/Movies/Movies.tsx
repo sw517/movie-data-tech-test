@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 import { MovieGrid } from '../MovieGrid/MovieGrid';
-import { RapidAPIResponse } from '@/types/api';
+import { RapidAPIListResponse } from '@/types/api';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { LoadingCircle } from '../LoadingCircle/LoadingCircle';
 import { useInView } from 'react-intersection-observer';
@@ -9,23 +9,17 @@ export const Movies: FC<{
   apiPath: string;
   queryString?: string;
 }> = ({ apiPath, queryString }): ReactNode => {
-  const {
-    isFetching,
-    isFetchingNextPage,
-    hasNextPage,
-    error,
-    data,
-    fetchNextPage,
-  } = useInfiniteQuery({
-    queryKey: [apiPath, queryString],
-    queryFn: ({ pageParam = 1 }): Promise<RapidAPIResponse> =>
-      fetch(`${apiPath}?page=${pageParam}&${queryString}`).then((res) =>
-        res.json()
-      ),
-    getNextPageParam: (data) =>
-      data?.next ? String(Number(data.page) + 1) : undefined,
-    initialPageParam: '1',
-  });
+  const { isFetching, isFetchingNextPage, hasNextPage, data, fetchNextPage } =
+    useInfiniteQuery({
+      queryKey: [apiPath, queryString],
+      queryFn: ({ pageParam = 1 }): Promise<RapidAPIListResponse> =>
+        fetch(`${apiPath}?page=${pageParam}&${queryString}`).then((res) =>
+          res.json()
+        ),
+      getNextPageParam: (data) =>
+        data?.next ? String(Number(data.page) + 1) : undefined,
+      initialPageParam: '1',
+    });
 
   const { ref: IntersectionObserverRef } = useInView({
     threshold: 1,
