@@ -5,7 +5,7 @@ import { LoadingCircle } from '../LoadingCircle/LoadingCircle';
 import { useInView } from 'react-intersection-observer';
 import { MovieItem } from '../MovieItem/MovieItem';
 
-export const Movies: FC<{
+export const MovieGrid: FC<{
   apiPath: string;
   queryString?: string;
 }> = ({ apiPath, queryString }): ReactNode => {
