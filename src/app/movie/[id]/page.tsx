@@ -62,17 +62,21 @@ export default function Movie({ params: { id } }: { params: { id: string } }) {
               )}
             </div>
           )}
+          <section className="py-3 px-6 mt-8 text-center ">
+            <h1 className="text-xl sm:text-3xl mb-6">
+              {movie?.titleText.text}
+            </h1>
+            <p className="text-lg">
+              Release date: {movie?.releaseYear?.year || 'Unknown'}
+            </p>
+            {movie?.releaseDate && getDateFromRelease(movie.releaseDate) && (
+              <p className="text-sm">
+                ({getDateFromRelease(movie.releaseDate)})
+              </p>
+            )}
+          </section>
         </>
       )}
-      <section className="py-3 px-6 mt-8 text-center ">
-        <h1 className="text-xl sm:text-3xl mb-6">{movie?.titleText.text}</h1>
-        <p className="text-lg">
-          Release date: {movie?.releaseYear?.year || 'Unknown'}
-        </p>
-        {movie?.releaseDate && getDateFromRelease(movie.releaseDate) && (
-          <p className="text-sm">({getDateFromRelease(movie.releaseDate)})</p>
-        )}
-      </section>
     </main>
   );
 }

@@ -1,9 +1,9 @@
 import { FC, ReactNode } from 'react';
-import { MovieGrid } from '../MovieGrid/MovieGrid';
 import { RapidAPIListResponse } from '@/types/api';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { LoadingCircle } from '../LoadingCircle/LoadingCircle';
 import { useInView } from 'react-intersection-observer';
+import { MovieItem } from '../MovieItem/MovieItem';
 
 export const Movies: FC<{
   apiPath: string;
@@ -30,6 +30,16 @@ export const Movies: FC<{
     },
   });
 
+  const items = data?.pages.flatMap((group) =>
+    group.results.map((movie) => {
+      return (
+        <div key={movie.id}>
+          <MovieItem {...movie} />
+        </div>
+      );
+    })
+  );
+
   return (
     <>
       {isFetching && !isFetchingNextPage && (
@@ -37,10 +47,10 @@ export const Movies: FC<{
           <LoadingCircle />
         </div>
       )}
-      {data && (
-        <>
-          <MovieGrid movies={data.pages.flatMap((group) => group.results)} />
-        </>
+      {items && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-3">
+          {items}
+        </div>
       )}
       {!isFetching && hasNextPage && (
         <>

@@ -2,7 +2,9 @@ import { Movie } from '@/types/movie';
 import { FC, ReactNode } from 'react';
 import { MovieItem } from '@/app/_components/MovieItem/MovieItem';
 
-export const MovieGrid: FC<{ movies: Movie[] }> = ({ movies }): ReactNode => {
+export const MovieGridOld: FC<{ movies: Movie[] }> = ({
+  movies,
+}): ReactNode => {
   const items = movies.map((movie) => (
     <div key={movie.id} className="">
       <MovieItem {...movie} />

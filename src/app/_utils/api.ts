@@ -24,8 +24,10 @@ export const getSearchParams = (
   req: NextRequest,
   keys: string[]
 ): { [key: string]: string | undefined } => {
-  return keys.reduce(
-    (acc, key) => ({ ...acc, [key]: req.nextUrl.searchParams.get(key) }),
-    {}
-  );
+  return keys.reduce((acc, key) => {
+    if (req.nextUrl.searchParams.get(key)) {
+      return { ...acc, [key]: req.nextUrl.searchParams.get(key) };
+    }
+    return acc;
+  }, {});
 };
