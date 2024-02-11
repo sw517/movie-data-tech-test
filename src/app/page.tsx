@@ -4,13 +4,21 @@ import { useEffect, useState } from 'react';
 import { MovieGrid } from './_components/MovieGrid/MovieGrid';
 import { useDebounce } from './_hooks/useDebounce';
 import { SearchInput } from './_components/SearchInput/SearchInput';
-import { APIRoute } from '@/types/api';
+import { APIRoute, RapidAPILists, RapidAPIListLabels } from '@/types/api';
+
+import { titles } from '@/data/movies/titles';
+import { MovieGridOld } from './_components/MovieGridOld/MovieGridOld';
+import { ListSelectOld } from './_components/ListSelectOld/ListSelectOld';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [apiPath, setApiPath] = useState('');
   const [queryString, setQueryString] = useState('');
   const debouncedQuery = useDebounce(searchQuery, 600);
+  const [selectedList, setSelectedList] = useState(
+    RapidAPILists.MOST_POPULAR_MOVIES
+  );
+  const [title, setTitle] = useState(RapidAPIListLabels[selectedList]);
 
   useEffect(() => {
     if (debouncedQuery) {
@@ -18,17 +26,21 @@ export default function Home() {
       setQueryString(`search=${debouncedQuery}`);
     } else {
       setApiPath(APIRoute.LIST);
-      setQueryString('');
+      setQueryString(`list=${selectedList}`);
     }
-  }, [debouncedQuery]);
+  }, [debouncedQuery, selectedList]);
 
   return (
-    <main className="max-w-screen-xl p-3 ml-auto mr-auto">
+    <main className="max-w-screen-xl flex flex-col p-3 ml-auto mr-auto">
       <div className="p-3 max-w-96">
         <SearchInput value={searchQuery} onChange={setSearchQuery} />
+        <ListSelectOld value={selectedList} onChange={setSelectedList} />
       </div>
-      <MovieGrid apiPath={apiPath} queryString={queryString} />
-      {/* <MovieGrid movies={titles} /> */}
+      <h1>{title}</h1>
+      <div className="overflow-hidden">
+        {/* <MovieGrid apiPath={apiPath} queryString={queryString} /> */}
+      </div>
+      <MovieGridOld movies={titles} />
     </main>
   );
 }
