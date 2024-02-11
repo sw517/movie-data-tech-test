@@ -1,19 +1,21 @@
 import { Movie } from './movie';
 
+// most_pop_movies & top_rated_250 are a valid keys but not currently working
+// in the API. Code can be uncommented when API is working.
 export enum RapidAPILists {
-  MOST_POPULAR_MOVIES = 'most_pop_movies',
   TOP_BOXOFFICE = 'top_boxoffice_200',
-  TOP_RATED = 'top_rated_250',
-  RECENT_TOP_BOXOFFICE = 'top_boxoffice_last_weekend_10',
+  RECENT_TOP_10 = 'top_boxoffice_last_weekend_10',
   ALL = 'titles',
+  // MOST_POPULAR_MOVIES = 'most_pop_movies',
+  // TOP_RATED = 'top_rated_250',
 }
 
 export const RapidAPIListLabels: Record<RapidAPILists, string> = {
-  [RapidAPILists.MOST_POPULAR_MOVIES]: 'Most Popular Movies',
   [RapidAPILists.TOP_BOXOFFICE]: 'Top Box Office',
-  [RapidAPILists.TOP_RATED]: 'Top Rated',
-  [RapidAPILists.RECENT_TOP_BOXOFFICE]: 'Recent Top Box Office',
+  [RapidAPILists.RECENT_TOP_10]: 'Recent Top 10 Box Office',
   [RapidAPILists.ALL]: 'All movies',
+  // [RapidAPILists.MOST_POPULAR_MOVIES]: 'Most Popular Movies',
+  // [RapidAPILists.TOP_RATED]: 'Top Rated',
 };
 
 export enum APIRoute {

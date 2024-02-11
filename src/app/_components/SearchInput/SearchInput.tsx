@@ -9,26 +9,25 @@ export const SearchInput: FC<{
     onChange(e.target.value);
   };
   return (
-    <label className="relative">
-      {/* Hidden label to satisfy a11y */}
-      <span className="invisible absolute h-px w-px overflow-hidden">
-        Search films
-      </span>
-      <input
-        value={value}
-        onChange={handleChange}
-        placeholder="Search by film title"
-        className="w-full rounded-3xl py-1 pl-3 pr-5 text-black"
-      />
-      {value && (
-        <button
-          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full text-white bg-gray-500 hover:bg-gray-400 p-1"
-          aria-label="Clear input"
-          onClick={() => onChange('')}
-        >
-          <XMarkIcon className="w-3" />
-        </button>
-      )}
+    <label className="block w-full">
+      <span className="text-sm mb-3 pl-3">Search films</span>
+      <div className="relative w-full">
+        <input
+          value={value}
+          onChange={handleChange}
+          placeholder="Search by film title"
+          className="w-full rounded-3xl py-1 pl-3 pr-5 text-black"
+        />
+        {value && (
+          <button
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full text-white bg-gray-500 hover:bg-gray-400 p-1"
+            aria-label="Clear input"
+            onClick={() => onChange('')}
+          >
+            <XMarkIcon className="w-3" />
+          </button>
+        )}
+      </div>
     </label>
   );
 };

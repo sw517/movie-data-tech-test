@@ -3,6 +3,11 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { ChangeEvent, FC, ReactNode, useEffect, useRef, useState } from 'react';
 
+// This component was created to customize the styles,
+// however, in the current state this component is unusable
+// as it prevents the search input from working correctly and
+// the useEffect listeners are conflicting with the option onclick.
+
 export const ListSelectOld: FC<{
   value: RapidAPILists;
   onChange: (e: RapidAPILists) => void;

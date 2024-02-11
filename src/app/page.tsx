@@ -8,17 +8,14 @@ import { APIRoute, RapidAPILists, RapidAPIListLabels } from '@/types/api';
 
 import { titles } from '@/data/movies/titles';
 import { MovieGridOld } from './_components/MovieGridOld/MovieGridOld';
-import { ListSelectOld } from './_components/ListSelectOld/ListSelectOld';
+import { ListSelect } from './_components/ListSelect/ListSelect';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [apiPath, setApiPath] = useState('');
   const [queryString, setQueryString] = useState('');
   const debouncedQuery = useDebounce(searchQuery, 600);
-  const [selectedList, setSelectedList] = useState(
-    RapidAPILists.MOST_POPULAR_MOVIES
-  );
-  const [title, setTitle] = useState(RapidAPIListLabels[selectedList]);
+  const [selectedList, setSelectedList] = useState(RapidAPILists.TOP_BOXOFFICE);
 
   useEffect(() => {
     if (debouncedQuery) {
@@ -32,15 +29,22 @@ export default function Home() {
 
   return (
     <main className="max-w-screen-xl flex flex-col p-3 ml-auto mr-auto">
-      <div className="p-3 max-w-96">
-        <SearchInput value={searchQuery} onChange={setSearchQuery} />
-        <ListSelectOld value={selectedList} onChange={setSelectedList} />
+      <div className="p-3 min-[480px]:flex items-center justify-between">
+        <div className="max-w-96 flex-grow">
+          <SearchInput value={searchQuery} onChange={setSearchQuery} />
+        </div>
+        <div className="mt-4 max-w-96 min-[480px]:mt-0 flex-grow min-[480px]:ml-8">
+          <ListSelect
+            disabled={!!searchQuery}
+            value={selectedList}
+            onChange={setSelectedList}
+          />
+        </div>
       </div>
-      <h1>{title}</h1>
       <div className="overflow-hidden">
-        {/* <MovieGrid apiPath={apiPath} queryString={queryString} /> */}
+        <MovieGrid apiPath={apiPath} queryString={queryString} />
       </div>
-      <MovieGridOld movies={titles} />
+      {/* <MovieGridOld movies={titles} /> */}
     </main>
   );
 }

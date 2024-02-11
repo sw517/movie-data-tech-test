@@ -13,5 +13,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Base: Story = {
-  args: { value: RapidAPILists.MOST_POPULAR_MOVIES, onChange: () => {} },
+  args: { value: RapidAPILists.TOP_BOXOFFICE, onChange: () => {} },
 };
