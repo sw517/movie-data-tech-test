@@ -43,18 +43,25 @@ export const MovieGrid: FC<{
   return (
     <>
       {isFetching && !isFetchingNextPage && (
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div
+          data-testid="initial-loading-circle"
+          className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
           <LoadingCircle />
         </div>
       )}
       {items && (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-3">
+        <div
+          data-testid="movie-grid"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-3"
+        >
           {items}
         </div>
       )}
       {!isFetching && hasNextPage && (
         <>
           <div
+            data-testid="loading-additional-circle"
             ref={IntersectionObserverRef}
             className="flex items-center justify-center pt-10 pb-28"
           >
