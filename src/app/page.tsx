@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { MovieGrid } from './_components/MovieGrid/MovieGrid';
-import { useDebounce } from './_hooks/useDebounce';
+import {
+  defaultDebounceDelay,
+  useDebouncedValue,
+} from './_hooks/useDebouncedValue';
 import { SearchInput } from './_components/SearchInput/SearchInput';
-import { APIRoute, RapidAPILists, RapidAPIListLabels } from '@/types/api';
+import { APIRoute, RapidAPILists } from '@/types/api';
 
 import { titles } from '@/data/movies/titles';
 import { MovieGridOld } from './_components/MovieGridOld/MovieGridOld';
@@ -14,7 +17,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [apiPath, setApiPath] = useState('');
   const [queryString, setQueryString] = useState('');
-  const debouncedQuery = useDebounce(searchQuery, 600);
+  const debouncedQuery = useDebouncedValue(searchQuery, defaultDebounceDelay);
   const [selectedList, setSelectedList] = useState(RapidAPILists.TOP_BOXOFFICE);
 
   useEffect(() => {
