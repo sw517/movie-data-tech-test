@@ -16,7 +16,7 @@ export const SearchInput: FC<{
           value={value}
           onChange={handleChange}
           placeholder="Search by film title"
-          className="w-full rounded-3xl py-1 pl-3 pr-5 text-black"
+          className="w-full rounded-3xl py-2 pl-3 pr-5 text-black"
         />
         {value && (
           <button

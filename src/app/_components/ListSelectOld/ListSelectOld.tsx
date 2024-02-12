@@ -41,11 +41,7 @@ export const ListSelectOld: FC<{
         !e.target.closest('#list-select')
       ) {
         setIsOpen(false);
-      } else if (isOpen) {
-        setIsOpen(false);
       }
-      // setTimeout(() => {
-      // }, 100);
     };
 
     const keyPressListener = (e: KeyboardEvent) => {

@@ -4,7 +4,7 @@ import { titles as mockData } from '@/data/movies/titles';
 import { MovieGridOld } from './MovieGridOld';
 
 const meta = {
-  title: 'Components/MovieGridOld',
+  title: 'Components/Legacy/MovieGridOld',
   component: MovieGridOld,
   tags: ['autodocs'],
 } satisfies Meta<typeof MovieGridOld>;
