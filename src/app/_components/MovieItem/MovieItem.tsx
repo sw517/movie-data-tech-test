@@ -28,7 +28,7 @@ export const MovieItem: FC<Movie> = ({
           !hasImage && styles['force-show-text'],
         ])}
       >
-        <h2 className="font-bold line-clamp-3">{titleText.text}</h2>
+        <p className="font-bold line-clamp-3">{titleText.text}</p>
         <p>({releaseYear?.year || 'Release date unknown'})</p>
       </div>
       {hasImage && primaryImage && (
