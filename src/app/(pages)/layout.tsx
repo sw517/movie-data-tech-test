@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Ubuntu } from 'next/font/google';
-import { Providers } from './providers';
-import './globals.css';
-import { GitHubLink } from './_components/GitHubLink/GitHubLink';
+import { Providers } from '@/app/_components/Providers/Providers';
+import '../globals.css';
+import { GitHubLink } from '@/app/_components/GitHubLink/GitHubLink';
 import clsx from 'clsx';
 import Link from 'next/link';
 

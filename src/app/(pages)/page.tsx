@@ -1,17 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { MovieGrid } from './_components/MovieGrid/MovieGrid';
+import { MovieGrid } from '@/app/_components/MovieGrid/MovieGrid';
 import {
   defaultDebounceDelay,
   useDebouncedValue,
-} from './_hooks/useDebouncedValue';
-import { SearchInput } from './_components/SearchInput/SearchInput';
+} from '@/app/_hooks/useDebouncedValue';
+import { SearchInput } from '@/app/_components/SearchInput/SearchInput';
 import { APIRoute, RapidAPILists } from '@/types/api';
 
 import { titles } from '@/data/movies/titles';
-import { MovieGridOld } from './_components/MovieGridOld/MovieGridOld';
-import { ListSelect } from './_components/ListSelect/ListSelect';
+import { MovieGridOld } from '@/app/_components/MovieGridOld/MovieGridOld';
+import { ListSelect } from '@/app/_components/ListSelect/ListSelect';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
